@@ -6,7 +6,7 @@
 /*   By: rawabdal <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/08 14:50:18 by rawabdal          #+#    #+#             */
-/*   Updated: 2026/10/08 15:28:27 by rawabdal         ###   ########.fr       */
+/*   Updated: 2026/10/12 17:28:16 by rawabdal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 char	*ft_itoa(int n)
 {
 	char	*c;
-	int	i;
-	int	num;
+	int		i;
+	int		num;
 
 	i = 0;
 	num = n;
@@ -25,16 +25,20 @@ char	*ft_itoa(int n)
 		num = num / 10;
 		i++;
 	}
-	c = malloc(i * sizeof(char));
-	while (i > 0)
+	c = malloc((i + 1) * sizeof(char));
+	if (!c)
+		return (NULL);
+	c[i] = '\0';
+	i--;
+	while (i >= 0)
 	{
-		c[i] = (char)(n % 10);
+		c[i] = (n % 10) + '0';
 		n = n / 10;
 		i--;
 	}
-	return c;
+	return (c);
 }
 
-int main(){
+/*int main(){
 	printf("%s", ft_itoa(256));
-}
+}*/

@@ -6,71 +6,77 @@
 /*   By: rawabdal <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/08 14:12:16 by rawabdal          #+#    #+#             */
-/*   Updated: 2026/10/08 14:50:00 by rawabdal         ###   ########.fr       */
+/*   Updated: 2026/10/12 15:44:13 by rawabdal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t	countWords(char *str, char c)
+static size_t	count_words(char *str, char c)
 {
-	int i;
-	int count;
+	size_t	i;
+	size_t	count;
 
 	i = 0;
+	count = 0;
 	while (str[i])
 	{
-		i++;
-		if (str[i] !== c)
-			break;
-	}
-	while (str[i])
-	{
-		if (str[i - 1] == c)
-		{
-			i++;
-			continue;
-		}
-		if (str[i] == c)
+		if (str[i] == c && str[i - 1] != c && str[i - 1] != '\0')
 			count++;
 		i++;
 	}
 	return (count);
 }
 
-static int	arraySize(char *str)
+static void	split_words(char *str, char **strstr, char c)
 {
-	int i;
+	size_t	i;
+	size_t	j;
+	size_t	start;
+
 	i = 0;
+	j = 0;
+	start = 0;
 	while (str[i])
+	{
+		if (str[i] != c && (i == 0 || str[i - 1] == c))
+			start = i;
+		if (str[i] != c && ((str[i + 1]) == '\0' || (str[i + 1]) == c))
+		{
+			strstr[j] = ft_substr(str, start, (i - start + 1));
+			j++;
+		}
 		i++;
+	}
 }
 
 char	**ft_split(char const *s, char c)
 {
-	char **str;
-	size_t i;
-	size_t j;
+	char	*str;
+	char	**strstr;
+	char	set[2];
 
-	str = (char **)malloc(countWords(s, c) * sizeof(char *));
-	i = 0;
-	while (i < countWords(s, c))
-	{
-		
-	}
-	str[0] = (char *)malloc(i + 1* sizeof(char));
-	str[1] = (char *)malloc((strlen(s) - i + 1) * sizeof(char *));
-	if (str == NULL || str[0] == NULL || str[1] == NULL)
+	set[0] = c;
+	set[1] = '\0';
+	str = ft_strtrim(s, set);
+	strstr = malloc((count_words(str, c) + 1) * sizeof(char *));
+	if (strstr == NULL)
 		return (NULL);
-	j = 0;
-	while (s[j] != '\0')
-	{
-		if (j < i)
-			str[0] = s[j];
-		else
-			str[1] = s[j];
-	}
-	str[0][j] = '\0';
-	str[1][j] = '\0';
-	return (str);
+	split_words(str, strstr, c);
+	free (str);
+	str = NULL;
+	return (strstr);
 }
+
+/*int main(){
+    char c = ' ';
+	int i;
+
+	char **str = ft_split("this is a sentence ", c);
+	i = 0;
+	while (str[i])
+	{
+		printf("%s\n", str[i]);
+		i++;
+	}
+}*/
