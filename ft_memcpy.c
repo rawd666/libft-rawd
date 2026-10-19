@@ -18,8 +18,8 @@ void	*ft_memcpy(void *dest, const void *src, int n)
 	unsigned char	*y;
 	int				i;
 
-	x = (unsigned char *) src;
-	y = (unsigned char *) dest;
+	x = (unsigned char *)src;
+	y = (unsigned char *)dest;
 	i = 0;
 	while (i < n)
 	{
@@ -30,8 +30,9 @@ void	*ft_memcpy(void *dest, const void *src, int n)
 }
 
 /*#include<string.h>
-#include<stdio.h>
-int main(){
+#include <stdio.h>
+
+int	main(void){
 	char a[5] = "hwtfd";
 	char b[5] = "srjwp";
 	char c[5] = "hwtfd";

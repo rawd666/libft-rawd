@@ -25,5 +25,5 @@ void	ft_putstr_fd(char *s, int fd)
 }
 
 /*int main(){
-    ft_putstr_fd("hello", 1);
+	ft_putstr_fd("hello", 1);
 }*/

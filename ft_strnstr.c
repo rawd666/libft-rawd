@@ -18,7 +18,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	size_t	i;
 	size_t	j;
 
-	b = (char *) big;
+	b = (char *)big;
 	i = 0;
 	if (little[0] == '\0')
 		return (b);
@@ -40,7 +40,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 }
 
 /*#include<bsd/string.h>
-int main(){
+int	main(void){
 	char big[20] = "hithere";
 	char little[20] = "";
 

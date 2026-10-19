@@ -20,8 +20,8 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	int				j;
 	int				k;
 
-	a = (unsigned char *) s1;
-	b = (unsigned char *) s2;
+	a = (unsigned char *)s1;
+	b = (unsigned char *)s2;
 	i = 0;
 	j = 0;
 	k = 0;
@@ -35,7 +35,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 }
 
 /*#include<string.h>
-int main(){
+int	main(void){
 	char a[20] = "abcdefg";
 	char b[20] = "abcdefh";
 

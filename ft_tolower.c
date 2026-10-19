@@ -22,8 +22,9 @@ int	ft_tolower(int c)
 }
 
 /*#include<ctype.h>
-#include<stdio.h>
-int main(){
+#include <stdio.h>
+
+int	main(void){
 	int c = 'A';
 
 	printf("%d ", ft_tolower(c));

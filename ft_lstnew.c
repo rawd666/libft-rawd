@@ -27,5 +27,5 @@ t_list	*ft_lstnew(void *content)
 }
 
 /*int main(){
-    printf("%s", ft_lstnew("hello"));
+	printf("%s", ft_lstnew("hello"));
 }*/

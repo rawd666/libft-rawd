@@ -35,8 +35,9 @@ int	ft_atoi(const char *nptr)
 }
 
 /*#include<stdio.h>
-#include<stdlib.h>
-int main(){
+#include <stdlib.h>
+
+int	main(void){
 	char c[20] = "214748364";
 
 	printf("%d ", ft_atoi(c));

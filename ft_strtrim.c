@@ -31,5 +31,5 @@ char	*ft_strtrim(char const *s1, char const *set)
 }
 
 /*int main(){
-    printf("%s", ft_strtrim("this ia test this", "this"));
+	printf("%s", ft_strtrim("this ia test this", "this"));
 }*/

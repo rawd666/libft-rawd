@@ -27,8 +27,9 @@ char	*ft_strchr(const char *s, int c)
 }
 
 /*#include<stdio.h>
-#include<string.h>
-int main(){
+#include <string.h>
+
+int	main(void){
 	char s[20] = "heythere";
 
 	printf("%s1 ", ft_strchr(s, '1'));

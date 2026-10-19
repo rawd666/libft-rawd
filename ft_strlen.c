@@ -25,8 +25,9 @@ int	ft_strlen(char *c)
 }
 
 /*#include<string.h>
-#include<stdio.h>
-int main(){
+#include <stdio.h>
+
+int	main(void){
 	char c[4] = "6ig";
 
 	printf("%d ", ft_strlen(c));

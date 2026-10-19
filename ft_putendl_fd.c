@@ -26,5 +26,5 @@ void	ft_putendl_fd(char *s, int fd)
 }
 
 /*int main(){
-    ft_putendl_fd("hello", 1);
+	ft_putendl_fd("hello", 1);
 }*/

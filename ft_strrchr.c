@@ -33,8 +33,9 @@ char	*ft_strrchr(const char *s, int c)
 }
 
 /*#include<stdio.h>
-#include<string.h>
-int main(){
+#include <string.h>
+
+int	main(void){
 	char s[20] = "heythere";
 
 	printf("%s ", ft_strrchr(s, 'e'));

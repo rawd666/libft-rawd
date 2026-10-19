@@ -18,8 +18,8 @@ void	*ft_memset(void *s, int c, int n)
 	unsigned char	c2;
 	int				i;
 
-	x = (unsigned char *) s;
-	c2 = (unsigned char) c;
+	x = (unsigned char *)s;
+	c2 = (unsigned char)c;
 	i = 0;
 	while (i < n)
 	{
@@ -30,8 +30,9 @@ void	*ft_memset(void *s, int c, int n)
 }
 
 /*#include<string.h>
-#include<stdio.h>
-int main(){
+#include <stdio.h>
+
+int	main(void){
 	char y[6] = "kfdhg";
 	char z[6] = "kfdhg";
 	char *r1 =ft_memset(y, '2', 4);

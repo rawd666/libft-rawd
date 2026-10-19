@@ -18,8 +18,8 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	unsigned char	*y;
 	size_t			i;
 
-	x = (unsigned char *) src;
-	y = (unsigned char *) dest;
+	x = (unsigned char *)src;
+	y = (unsigned char *)dest;
 	i = 0;
 	if (y < x)
 	{
@@ -40,7 +40,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 }
 
 /*#include<string.h>
-int main(){
+int	main(void){
 	char c[20] = "welcometo42";
 
 	char *r1 = ft_memmove(c, c + 5, 4);

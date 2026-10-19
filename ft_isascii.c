@@ -22,8 +22,9 @@ int	ft_isascii(int c)
 }
 
 /*#include<ctype.h>
-#include<stdio.h>
-int main(){
+#include <stdio.h>
+
+int	main(void){
 	int x;
 
 	x = -1;

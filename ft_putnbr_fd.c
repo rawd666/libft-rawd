@@ -28,5 +28,5 @@ void	ft_putnbr_fd(int n, int fd)
 }
 
 /*int main(){
-    ft_putnbr_fd(326, 1);
+	ft_putnbr_fd(326, 1);
 }*/

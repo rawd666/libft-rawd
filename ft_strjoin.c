@@ -27,7 +27,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 }
 
 /*int main(){
-    char *s1 = "hello ";
-    char *s2 = "there";
-    printf("%s", ft_strjoin(s1, s2));
+	char *s1 = "hello ";
+	char *s2 = "there";
+	printf("%s", ft_strjoin(s1, s2));
 }*/

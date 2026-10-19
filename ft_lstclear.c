@@ -14,13 +14,12 @@
 
 /*void del(void *ptr)
 {
-    free(ptr);
-}*/
-
-void	ft_lstclear(t_list **lst, void (*del)(void*))
-{
 	t_list	*temp;
 
+	free(ptr);
+}*/
+void	ft_lstclear(t_list **lst, void (*del)(void *))
+{
 	if (!lst || !del)
 		return ;
 	while (*lst)
@@ -34,19 +33,19 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 }
 
 /*int main(){
-    t_list *head = NULL;
-    t_list *n1 = ft_lstnew(ft_strdup("hello"));
-    ft_lstadd_front(&head, n1);
-    t_list *n2 = ft_lstnew(ft_strdup("how"));
-    ft_lstadd_front(&head, n2);
-    t_list *n3 = ft_lstnew(ft_strdup("are"));
-    ft_lstadd_front(&head, n3);
-    t_list *n4 = ft_lstnew(ft_strdup("hi"));
-    ft_lstadd_back(&head, n4);
+	t_list *head = NULL;
+	t_list *n1 = ft_lstnew(ft_strdup("hello"));
+	ft_lstadd_front(&head, n1);
+	t_list *n2 = ft_lstnew(ft_strdup("how"));
+	ft_lstadd_front(&head, n2);
+	t_list *n3 = ft_lstnew(ft_strdup("are"));
+	ft_lstadd_front(&head, n3);
+	t_list *n4 = ft_lstnew(ft_strdup("hi"));
+	ft_lstadd_back(&head, n4);
 
-    printf("%s\n", (char *)(ft_lstlast(head)->content));
+	printf("%s\n", (char *)(ft_lstlast(head)->content));
 
-    ft_lstclear(&head, del);
+	ft_lstclear(&head, del);
 
-    printf("%s\n", (char *)(ft_lstlast(head)->content));
+	printf("%s\n", (char *)(ft_lstlast(head)->content));
 }*/

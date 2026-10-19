@@ -63,13 +63,13 @@ char	**ft_split(char const *s, char c)
 	if (strstr == NULL)
 		return (NULL);
 	split_words(str, strstr, c);
-	free (str);
+	free(str);
 	str = NULL;
 	return (strstr);
 }
 
 /*int main(){
-    char c = ' ';
+	char c = ' ';
 	int i;
 
 	char **str = ft_split("this is a sentence ", c);

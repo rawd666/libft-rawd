@@ -17,7 +17,7 @@ void	ft_bzero(void *s, int n)
 	unsigned char	*x;
 	int				i;
 
-	x = (unsigned char *) s;
+	x = (unsigned char *)s;
 	i = 0;
 	while (i < n)
 	{
@@ -27,8 +27,9 @@ void	ft_bzero(void *s, int n)
 }
 
 /*#include<stdio.h>
-#include<strings.h>
-int main(){
+#include <strings.h>
+
+int	main(void){
 	char a[4] = "sjdg";
 	char b[4] = "sjdg";
 

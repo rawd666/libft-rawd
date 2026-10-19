@@ -22,8 +22,9 @@ int	ft_isalpha(int c)
 }
 
 /*#include<stdio.h>
-#include<ctype.h>
-int main()
+#include <ctype.h>
+
+int	main(void)
 {
 	int x;
 

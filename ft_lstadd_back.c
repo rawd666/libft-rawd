@@ -32,20 +32,20 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 }
 
 /*int main(){
-    t_list *head = NULL;
-    t_list *n1 = ft_lstnew("hello");
-    ft_lstadd_front(&head, n1);
-    t_list *n2 = ft_lstnew("how");
-    ft_lstadd_front(&head, n2);
-    t_list *n3 = ft_lstnew("are");
-    ft_lstadd_front(&head, n3);
-    t_list *n4 = ft_lstnew("hi");
-    ft_lstadd_back(&head, n4);
+	t_list *head = NULL;
+	t_list *n1 = ft_lstnew("hello");
+	ft_lstadd_front(&head, n1);
+	t_list *n2 = ft_lstnew("how");
+	ft_lstadd_front(&head, n2);
+	t_list *n3 = ft_lstnew("are");
+	ft_lstadd_front(&head, n3);
+	t_list *n4 = ft_lstnew("hi");
+	ft_lstadd_back(&head, n4);
 
-    printf("%s", (char *)(ft_lstlast(head)->content));
+	printf("%s", (char *)(ft_lstlast(head)->content));
 
-    free(n1);
-    free(n2);
-    free(n3);
-    free(n4);
+	free(n1);
+	free(n2);
+	free(n3);
+	free(n4);
 }*/

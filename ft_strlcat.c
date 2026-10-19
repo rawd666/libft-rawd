@@ -39,13 +39,13 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 }
 
 /*#include<bsd/string.h>
-int main(){
+int	main(void){
 	char dst[20] = "welcome";
 	char src[20] = "";
 
 	char dst1[20] = "welcome";
 	char src1[20] = "";
-	
+
 	printf("%zu ", ft_strlcat(dst, src, 20));
 	printf("%zu ", strlcat(dst1, src1, 20));
 	printf("\ndst : %s\n",dst);

@@ -18,8 +18,8 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	unsigned char	y;
 	size_t			i;
 
-	x = (unsigned char *) s;
-	y = (unsigned char) c;
+	x = (unsigned char *)s;
+	y = (unsigned char)c;
 	i = 0;
 	while (i < n)
 	{
@@ -31,7 +31,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 }
 
 /*#include<string.h>
-int main(){
+int	main(void){
 	char s[20] = "274523597";
 
 	char *r1 = ft_memchr(s, '8', 7);

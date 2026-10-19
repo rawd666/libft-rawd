@@ -32,7 +32,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 
 /*char	to_upper(unsigned int i, char c)
 {
-    (void)i;
+	(void)i;
 	if (c >= 'a' && c <= 'z')
 	{
 		c -= 32;
@@ -40,7 +40,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	return (c);
 }
 
-int main(){
-    char const *s = "hello";
-    printf("%s", ft_strmapi(s, to_upper));
+int	main(void){
+	char const *s = "hello";
+	printf("%s", ft_strmapi(s, to_upper));
 }*/
