@@ -15,12 +15,10 @@
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	char	*b;
-	char	*l;
 	size_t	i;
 	size_t	j;
 
 	b = (char *) big;
-	l = (char *) little;
 	i = 0;
 	if (little[0] == '\0')
 		return (b);
