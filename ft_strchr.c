@@ -15,15 +15,17 @@
 char	*ft_strchr(const char *s, int c)
 {
 	int	i;
+	char	*str;
 
-	i = -1;
-	while (s[i] != '\0')
+	str = (char *) s;
+	i = 0;
+	while (str[i] != '\0')
 	{
+		if (str[i] == (char)c)
+			return (str + i);
 		i++;
-		if (s[i] == c)
-			return ((char *)(s + i));
 	}
-	return (NULL);
+	return (str + i);
 }
 
 /*#include<stdio.h>
@@ -32,6 +34,6 @@ char	*ft_strchr(const char *s, int c)
 int	main(void){
 	char s[20] = "heythere";
 
-	printf("%s1 ", ft_strchr(s, '1'));
-	printf("%s2 ", strchr(s, '1'));
+	printf("%s1 ", ft_strchr(s, 'e'));
+	printf("%s2 ", strchr(s, 'e'));
 }*/
