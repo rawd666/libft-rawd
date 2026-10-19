@@ -16,41 +16,45 @@ t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
     t_list  *head = NULL;
     t_list  *new;
-    t_list  *tmp;
+    void    *new_content;
 
-    if (!lst || !f)
+    if (!lst || !f || !del)
         return (NULL);
     while (lst)
     {
-        tmp = lst;
-        new = ft_lstnew(f(lst->content));
+        new_content = f(lst->content);
+        new = ft_lstnew(new_content);
+        if(!new)
+        {
+            if(new_content)
+                del(new_content);
+            ft_lstclear(&head, del);
+            return (NULL);
+        }
         ft_lstadd_back(&head, new);
         lst = lst->next;
-        del(tmp);
     }
-    return (new);
+    return (head);
 }
 
-void del(void *ptr)
+/*void del(void *ptr)
 {
     free(ptr);
-    ptr = NULL;
 }
 
 void *to_upper(void *c)
 {
     int i;
-    unsigned char *ch;
-
-    ch = (unsigned char *) c;
+    const char *ch  = (const char *) c;
+    char *new_ch = ft_strdup(ch);
     i = 0;
-    while (ch[i])
+    while (new_ch[i])
     {
-        if (ch[i] >= 'a' && ch[i] <= 'z')
-		    ch[i] -= 32;
+        if (new_ch[i] >= 'a' && new_ch[i] <= 'z')
+		    new_ch[i] -= 32;
         i++;
     }
-    return (ch);
+    return (new_ch);
 }
 
 int main(){
@@ -77,4 +81,11 @@ int main(){
         printf("%s ", (char *)((new)->content));
         new = new->next;
     }
-}
+
+    count = head;
+    while (count)
+    {
+        printf("%s ", (char *)((count)->content));
+        count = count->next;
+    }
+}*/
