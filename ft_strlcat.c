@@ -24,7 +24,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	s = 0;
 	while (src[s] != '\0')
 		s++;
-	if (size >= d)
+	if (size > d)
 	{
 		i = 0;
 		while (i + d < size - 1 && src[i] != '\0')
@@ -39,15 +39,15 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 }
 
 /*#include<bsd/string.h>
-int	main(void){
-	char dst[20] = "welcome";
-	char src[20] = "";
+int	main(){
+	char dst[20] = "B   ";
+	//char src[20] = "";
 
-	char dst1[20] = "welcome";
-	char src1[20] = "";
+	char dst1[20] = "B   ";
+	//char src1[20] = "";
 
-	printf("%zu ", ft_strlcat(dst, src, 20));
-	printf("%zu ", strlcat(dst1, src1, 20));
+	printf("%zu ", ft_strlcat(dst, "123", 0));
+	printf("%zu ", strlcat(dst1, "123", 0));
 	printf("\ndst : %s\n",dst);
 	printf("dst1: %s\n",dst1);
 }*/

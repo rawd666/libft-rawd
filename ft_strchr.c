@@ -14,8 +14,8 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	int	i;
 	char	*str;
+	int		i;
 
 	str = (char *) s;
 	i = 0;
@@ -25,7 +25,9 @@ char	*ft_strchr(const char *s, int c)
 			return (str + i);
 		i++;
 	}
-	return (str + i);
+	if (c == '\0')
+		return (str + i);
+	return (NULL);
 }
 
 /*#include<stdio.h>

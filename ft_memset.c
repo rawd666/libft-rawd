@@ -33,10 +33,10 @@ void	*ft_memset(void *s, int c, int n)
 #include <stdio.h>
 
 int	main(void){
-	char y[6] = "kfdhg";
-	char z[6] = "kfdhg";
-	char *r1 =ft_memset(y, '2', 4);
-	char *r2 = memset(z, '2', 4);
+	char y[2] = "kf";
+	char z[2] = "kf";
+	char *r1 =ft_memset(y, '2', 5);
+	char *r2 = memset(z, '2', 5);
 	printf("%s ",r1);
 	printf("%s",r2 );
 }*/
