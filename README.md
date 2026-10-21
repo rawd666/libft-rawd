@@ -61,4 +61,4 @@ The goal of this project is to create a comprehensive library of C functions. Th
 [Linux Manual Pages (Man 3)](https://linux.die.net/man/3/unix)
 
 ### AI Usage
-AI was used for error-checking purposes after hand-writing code and manual error checking. It was also used for research purposes when an idea was not fully understood. AI was never used to write or generate code.
+AI was utilized solely for error-checking purposes after hand-writing the code and conducting manual debugging. It was also used as a research tool when specific programming concepts required clarification. AI was never used to write, generate, or restructure the source code.
