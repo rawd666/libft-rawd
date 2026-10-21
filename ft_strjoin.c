@@ -18,9 +18,13 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	int		size1;
 	int		size2;
 
+	if (!s1 || !s2)
+		return (NULL);
 	size1 = ft_strlen((char *)s1);
 	size2 = ft_strlen((char *)s2);
 	str = malloc((size1 + size2 + 1) * sizeof(char));
+	if (!str)
+		return (NULL);
 	ft_memcpy(str, s1, size1);
 	ft_memcpy(str + size1, s2, size2 + 1);
 	return (str);

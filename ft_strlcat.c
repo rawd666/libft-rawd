@@ -39,7 +39,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 }
 
 /*#include<bsd/string.h>
-int	main(){
+int	main(void){
 	char dst[20] = "B   ";
 	//char src[20] = "";
 

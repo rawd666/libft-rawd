@@ -17,11 +17,11 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	unsigned char	*a;
 	unsigned char	*b;
 	size_t			i;
-	int				j;
-	int				k;
+	size_t			j;
+	size_t			k;
 
 	if (!s1 || !s2)
-		return 0;
+		return (0);
 	a = (unsigned char *)s1;
 	b = (unsigned char *)s2;
 	i = 0;
@@ -35,12 +35,14 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (j - k);
 }
+/*
+#include <string.h>
 
-/*#include<string.h>
 int	main(void){
 	char a[20] = "abcdefg";
 	char b[20] = "abcdefh";
 
 	printf("%d ", ft_memcmp(a, b, 8));
 	printf("%d", memcmp(a, b, 8));
-}*/
+}
+*/

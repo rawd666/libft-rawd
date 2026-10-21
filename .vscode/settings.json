@@ -1,6 +1,0 @@
-{
-    "js/ts.suggest.includeAutomaticOptionalChainCompletions": false,
-    "terminal.integrated.suggest.enabled": false,
-    "js/ts.suggest.enabled": false,
-    "editor.inlineSuggest.enabled": false
-}

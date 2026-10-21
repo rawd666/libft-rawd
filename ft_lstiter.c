@@ -23,7 +23,8 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 	}
 }
 
-/*void	to_upper(void *c)
+/*
+void	to_upper(void *c)
 {
 	int				i;
 	unsigned char	*ch;
@@ -54,4 +55,5 @@ int	main(void){
 	ft_lstiter(head, to_upper);
 
 	printf("%s\n", (char *)(ft_lstlast(head)->content));
-}*/
+}
+*/

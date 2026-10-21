@@ -56,7 +56,7 @@ char	*ft_itoa(int n)
 	return (c);
 }
 /**
-int main(){
+int	main(void){
 	printf("%s", ft_itoa(-256));
 }
 */

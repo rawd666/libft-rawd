@@ -15,18 +15,24 @@
 void	ft_putnbr_fd(int n, int fd)
 {
 	char	c;
+	long	i;
 
-	if (n < 0)
+	i = n;
+	if (fd < 0)
 	{
-		n *= -1;
-		write(1, "-", 1);
+		return ;
 	}
-	c = n % 10 + '0';
-	if (n > 10)
-		ft_putnbr_fd(n / 10, fd);
+	if (i < 0)
+	{
+		write(fd, "-", 1);
+		i *= -1;
+	}
+	if (i >= 10)
+		ft_putnbr_fd(i / 10, fd);
+	c = i % 10 + '0';
 	write(fd, &c, 1);
 }
 
 /*int main(){
-	ft_putnbr_fd(326, 1);
+	ft_putnbr_fd(0, 1);
 }*/
